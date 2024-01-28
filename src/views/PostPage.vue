@@ -1,26 +1,28 @@
 <script lang="ts">
-  import CommonContent from '@/components/CommonContent.vue';
+  import PostCard from '@/components/PostCard.vue';
   import { Component, Vue } from 'vue-property-decorator';
 
   @Component({
     components: {
-      CommonContent,
+      PostCard,
     },
   })
-  export default class HomeView extends Vue {}
+  export default class PostPage extends Vue {
+    postId = parseInt(this.$route.params.postId);
+  }
 </script>
 
 <template>
-  <div class="home">
+  <div class="post">
     <div>
-      <h1>Home</h1>
-      <CommonContent text="ホーム画面です" />
+      <h1>Post</h1>
+      <PostCard :postId="postId" />
     </div>
   </div>
 </template>
 
 <style scoped>
-  .home {
+  .post {
     display: flex;
     justify-content: center;
   }

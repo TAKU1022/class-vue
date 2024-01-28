@@ -7,7 +7,7 @@
       CommonContent,
     },
   })
-  export default class AboutView extends Vue {}
+  export default class AboutPage extends Vue {}
 </script>
 
 <template>
