@@ -1,10 +1,10 @@
 <script lang="ts">
+  import CommonContent from '@/components/CommonContent.vue';
   import { Component, Vue } from 'vue-property-decorator';
-  import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
   @Component({
     components: {
-      HelloWorld,
+      CommonContent,
     },
   })
   export default class HomeView extends Vue {}
@@ -12,7 +12,16 @@
 
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <div>
+      <h1>Home</h1>
+      <CommonContent text="ホーム画面です" />
+    </div>
   </div>
 </template>
+
+<style scoped>
+  .home {
+    display: flex;
+    justify-content: center;
+  }
+</style>
