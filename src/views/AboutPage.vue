@@ -10,13 +10,13 @@
     },
   })
   export default class AboutPage extends Vue {
-    counter = 0;
+    count = 0;
 
-    addCounter() {
-      this.counter += 1;
+    addCount() {
+      this.count += 1;
     }
-    decrementCounter() {
-      this.counter -= 1;
+    decrementCount() {
+      this.count -= 1;
     }
   }
 </script>
@@ -26,11 +26,8 @@
     <div>
       <h1>About</h1>
       <CommonContent text="詳細画面です" />
-      <p>{{ counter }}</p>
-      <CounterButtons
-        @add-counter="addCounter"
-        @decrement-counter="decrementCounter"
-      />
+      <p>{{ count }}</p>
+      <CounterButtons @add-count="addCount" @decrement-count="decrementCount" />
     </div>
   </div>
 </template>

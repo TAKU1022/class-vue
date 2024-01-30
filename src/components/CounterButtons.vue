@@ -3,19 +3,19 @@
 
   @Component
   export default class CounterButtons extends Vue {
-    addCounter() {
-      this.$emit('add-counter');
+    addCount() {
+      this.$emit('add-count');
     }
-    decrementCounter() {
-      this.$emit('decrement-counter');
+    decrementCount() {
+      this.$emit('decrement-count');
     }
   }
 </script>
 
 <template>
   <div class="buttons">
-    <button @click="addCounter">add</button>
-    <button @click="decrementCounter">decrement</button>
+    <button @click="addCount">add</button>
+    <button @click="decrementCount">decrement</button>
   </div>
 </template>
 
